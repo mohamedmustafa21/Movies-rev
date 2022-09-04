@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Movies-rev/static/css/main.71e5debe.css",
+    "main.js": "/Movies-rev/static/js/main.8e6ead32.js",
+    "index.html": "/Movies-rev/index.html",
+    "main.71e5debe.css.map": "/Movies-rev/static/css/main.71e5debe.css.map",
+    "main.8e6ead32.js.map": "/Movies-rev/static/js/main.8e6ead32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71e5debe.css",
+    "static/js/main.8e6ead32.js"
+  ]
+}
