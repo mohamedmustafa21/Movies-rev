@@ -7,12 +7,12 @@ import SingleMovie from './components/SingleMovie/SingleMovie';
 import Navbar from './components/Navbar/Navbar';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Error from './components/Error/Error';
 import ProductRoute from './components/ProdectRoute/ProductRoute';
+import Footer from './components/Footer/Footer';
+import Register from './components/Register/Rigester';
 
 
 function App() {
-  console.log(localStorage)
 
   
 
@@ -22,12 +22,16 @@ function App() {
       <Navbar/>
     <Routes>
      
-    <Route path='*/' element={<Login/>} />
+    <Route index path='*/' element={<Login/>} />
+    <Route index path='/rigister' element={<Register/>} />
+
 
 
 {/* This Route We Protact Them If User Dosn't Login Can't Show Them  */}
             <Route element={<ProductRoute/>}>
             <Route path='/' element={<Home/>} />
+            <Route path='/*' element={<Home/>} />
+
               <Route path='/home' element={<Home/>} />
               <Route path='/about' element={<About/>} />
               <Route path='/contact' element={<Contact/>} />
@@ -35,13 +39,16 @@ function App() {
 
 
 
-        
+              <Route  element={<Footer/>} />
 
             </Route>
 
 
     </Routes>
+    <Footer/>
+
     </BrowserRouter>
+
     </div>
   );
 }

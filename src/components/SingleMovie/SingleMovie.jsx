@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 function SingleMovie() {
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     // function gender(){
     //     const  person =  location.state.movie.media_type
     //     console.log(person)

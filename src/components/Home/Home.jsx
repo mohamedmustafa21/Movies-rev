@@ -25,6 +25,7 @@ function Home() {
         getData('movie',settrandingMovie);
         getData('tv', setTrendingTv );
         getData('person', setTrendingPeople );
+        
     }, []);
     // console.log(trandingMovie);
     let imgPrefix = "https://image.tmdb.org/t/p/w500";
@@ -36,9 +37,17 @@ function Home() {
        
             <div className="container mt-4">
                 <div className="row">
-                    <div className="col-md-4 d-flex align-items-center">
+                    <div className="col-md-4 d-flex align-items-center justify-content-center">
                         <div>
-                            <div className="brdr my-3 w-25"></div>
+                        {
+    localStorage.token ? <>
+    
+    <h5>Hello <span className="text-danger">{localStorage.user}</span> </h5>
+      
+
+    </>:<> ""</>
+  }
+                            <div className="brdr my-3 w-50"></div>
                             <h2 className="h4">
                                 Trending Movies <br />
                                 To Watch <br /> Right Now{" "}
