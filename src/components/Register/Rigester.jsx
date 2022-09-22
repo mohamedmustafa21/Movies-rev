@@ -23,7 +23,7 @@ function Rigester() {
   }
   const [errorReg, seterror] = useState([]);
  
-console.log(errorReg)
+// console.log(errorReg)
 
   //  const navigate = useNavigate();
  
@@ -47,7 +47,7 @@ console.log(errorReg)
 
     } else {
        console.log('helllo')
-      console.log(errorReg)
+    //   console.log(errorReg)
     }
   }
 
