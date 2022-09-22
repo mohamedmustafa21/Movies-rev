@@ -46,7 +46,6 @@ function Rigester() {
 
     } else {
        console.log('helllo')
-    //   console.log(errorReg)
     }
   }
 
