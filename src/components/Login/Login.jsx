@@ -28,7 +28,7 @@ function Login() {
 
   async function FormSubmit(e) {
     e.preventDefault();
-    const res = await axios.post("http://127.0.0.1:8000/api/login", user);
+    const res = await axios.post("https://laravel-backendd.herokuapp.com/api/login", user);
     const json = res.data;
     // const history = useNavigate();
     // console.log(json)

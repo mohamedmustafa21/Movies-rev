@@ -35,11 +35,11 @@ function Rigester() {
 
         // if(erorrDataa.message ==='Success' ){
         //     console.log('gotit')
-        // }
+        
     
       });
     e.preventDefault();
-    const res = await axios.post("http://127.0.0.1:8000/api/register", newUser);
+    const res = await axios.post("https://laravel-backendd.herokuapp.com/api/register", newUser);
     const json = res.data;
     if (json.message === 'Success') {
       navigate("/login");
