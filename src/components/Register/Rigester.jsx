@@ -32,20 +32,21 @@ function Rigester() {
     axios.interceptors.response.use(undefined, (error) => {
         const erorrDataa = error.response.data;
         seterror(erorrDataa)
-
+        localStorage.setItem("error", erorrDataa.message);
+        
         // if(erorrDataa.message ==='Success' ){
         //     console.log('gotit')
         
-    
       });
     e.preventDefault();
     const res = await axios.post("https://laravel-backendd.herokuapp.com/api/register", newUser);
     const json = res.data;
     if (json.message === 'Success') {
       navigate("/login");
+      localStorage.clear()
 
-    } else {
-       console.log('helllo')
+    } else  {
+      
     }
   }
 
@@ -59,8 +60,8 @@ function Rigester() {
             <form onSubmit={FormSubmit} className="w-50   ">
               <div className="my-2">
               <div>
-              {errorReg.message ? (
-                <div className="alert-danger rounded-3 py-3 m-2 p-3">{errorReg.message}</div>
+              {localStorage.error ? (
+                <div className="alert-danger rounded-3 py-3 m-2 p-3">{localStorage.error}</div>
               ) : (
                 <></>
               )}
@@ -106,7 +107,7 @@ function Rigester() {
               </div>
 
               <button type="submit " className="btn btn-info ">
-                Login
+                Register
               </button>
             </form>
           </div>
