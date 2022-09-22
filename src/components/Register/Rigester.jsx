@@ -41,7 +41,6 @@ function Rigester() {
     e.preventDefault();
     const res = await axios.post("http://127.0.0.1:8000/api/register", newUser);
     const json = res.data;
-    // seterror(json)
     if (json.message === 'Success') {
       navigate("/login");
 
